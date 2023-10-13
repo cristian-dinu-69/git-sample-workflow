@@ -25,5 +25,7 @@ print (f"Accuracy score for iris dataset is {acc}")
 filename = 'finalized_model'
 pickle.dump(clf, open(filename, 'wb'))
 
+print("Bau Bau")
+
 
 
