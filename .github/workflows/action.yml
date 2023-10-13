@@ -13,7 +13,7 @@ jobs:
               with: 
                 who-to-greet: devopshint
             - name: Get the ouput time
-              run : echo "{{ steps.hello.outputs.time}}"
+              run : echo "${{ steps.hello.outputs.time}}"
 
 
 
