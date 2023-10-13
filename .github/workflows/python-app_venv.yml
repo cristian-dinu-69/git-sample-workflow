@@ -39,5 +39,9 @@ jobs:
     - name: Run the SQRTs
       run: python main.py
 
+    - name: identify App
+      run: |
+        echo "Scriptul meu"
+
     - name: Test with pytest
       run: pytest

@@ -28,6 +28,10 @@ jobs:
     - name: Run tests
       run: python main.py 
 
+    - name: identify App
+      run: |
+        echo "Microsoft"
+
     - name: Test with pytest
       run: |
         pytest
