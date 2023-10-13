@@ -6,11 +6,9 @@ name: Python application virt env
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # pull_request:
+    # branches: [ "main" ]
 
-permissions:
-  contents: read
 
 jobs:
   build:
@@ -19,6 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Set up Python 3.8
       uses: actions/setup-python@v3
       with:
@@ -28,12 +27,13 @@ jobs:
     - name: Install dependencies
       run: |
       
-        python3.8 -m venv env
+        python3 -m venv env
         source env/bin/activate
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
 
         # pip install pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # if [ -f requirements.txt ]; then 
+        pip install -r requirements.txt
         
     - name: Run the SQRTs
       run: |
